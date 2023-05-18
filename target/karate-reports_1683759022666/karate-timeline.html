@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/resources\/features\/SecurityAPITest[1:4]","start":1683758578000,"end":1683758579657,"title":"src\/test\/resources\/features\/SecurityAPITest[1:4] 18:42:58.000-18:42:59.657 Create token with valid username and password."},{"id":2,"group":1,"content":"src\/test\/resources\/features\/SecurityAPITest[2:20]","start":1683758579663,"end":1683758579970,"title":"src\/test\/resources\/features\/SecurityAPITest[2:20] 18:42:59.663-18:42:59.970 Validate Token with Invalid username"},{"id":3,"group":1,"content":"src\/test\/resources\/features\/SecurityAPITest[3:37]","start":1683758579975,"end":1683758579974,"title":"src\/test\/resources\/features\/SecurityAPITest[3:37] 18:42:59.975-18:42:59.974 Validate Token with Valid username and Invalid Password"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
