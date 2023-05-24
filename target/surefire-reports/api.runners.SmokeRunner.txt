@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: api.runners.SmokeRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.431 s <<< FAILURE! - in api.runners.SmokeRunner
+runTests  Time elapsed: 1.431 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: no features or scenarios found: [classpath:features]
+
