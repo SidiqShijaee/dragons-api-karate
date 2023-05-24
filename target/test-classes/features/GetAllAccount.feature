@@ -1,3 +1,4 @@
+ @Regression
 Feature: Get All Accounts
 
 Background: API test
@@ -5,7 +6,7 @@ Background: API test
     And print result
     * def generatedToken = result.response.token
     Given url "https://tek-insurance-api.azurewebsites.net"
-    
+   
     Scenario: Get all accounts
     Given path "/api/accounts/get-all-accounts"
     And header Authorization = "Bearer " + generatedToken
